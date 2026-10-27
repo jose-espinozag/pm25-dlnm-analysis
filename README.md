@@ -24,13 +24,13 @@ The study analyzed asthma ED visits from 10 public hospitals in Lima, Peru, betw
 
 ## Data Availability
 
-The individual-level health data used in this study are not publicly available due to confidentiality and data protection requirements. Access to these data may be requested from the participating hospitals, subject to their authorization, applicable ethical requirements, and institutional data access procedures.
+The individual-level health data used in this study are not publicly available due to confidentiality and data protection requirements. Access may be requested from the participating hospitals, subject to their authorization, applicable ethical requirements, and institutional data access procedures.
 
 The R code used for the statistical analyses is publicly available in this repository.
 
 ## Requirements
 
-The analysis was developed in R and uses the following packages:
+The analyses were conducted in R version 4.3.2 using the following packages:
 
 - `dlnm`
 - `survival`
@@ -38,7 +38,7 @@ The analysis was developed in R and uses the following packages:
 - `lmtest`
 - `splines` (included with R)
 
-The required packages can be installed using:
+Install the required packages using:
 
 ```r
 install.packages(c("dlnm", "survival", "data.table", "lmtest"))
@@ -46,19 +46,21 @@ install.packages(c("dlnm", "survival", "data.table", "lmtest"))
 
 ## Running the Analysis
 
+The analysis requires a preprocessed dataset named `bd_integral`, containing the outcome indicator, matching-stratum identifier, PM2.5 exposure and lagged values, meteorological variables and their lagged values, holiday indicator, residential proximity indicators, and variables used for stratified analyses.
+
 To run the analysis:
 
 1. Install R and the required packages.
 2. Obtain authorized access to the study data.
-3. Prepare the dataset according to the variable names and structure expected by the script.
-4. Load the prepared dataset into R as `bd_integral`.
+3. Prepare the analytical dataset with the variable names and structure required by `analysis.R`.
+4. Load the dataset into R as `bd_integral`.
 5. Run `analysis.R`.
 
-The analysis requires a preprocessed dataset named `bd_integral`, containing the outcome, exposure variables, lagged exposure measurements, meteorological covariates, matching strata, and other variables used in the models. The dataset is not included in this repository.
+The dataset is not included in this repository.
 
 ## Reproducibility
 
-This repository provides the R code used for the statistical analyses reported in the accompanying article. Reproducing the analyses requires access to the appropriate input data, the necessary computational environment, and compatible versions of R and the required packages.
+Reproducing the analyses requires access to the appropriate input data and a compatible R environment with the required packages.
 
 ## Citation
 
